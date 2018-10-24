@@ -1,6 +1,7 @@
 import java.util.Date;
 
 public class Waiter {
+    private int id;
     private String firstName;
     private String lastName;
     private int age;
@@ -11,6 +12,14 @@ public class Waiter {
         this.lastName = lastName;
         this.age = age;
         this.employmentDate = employmentDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {
