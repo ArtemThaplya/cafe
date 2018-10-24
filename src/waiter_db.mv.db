@@ -1,0 +1,17 @@
+# CREATE SCHEMA `waiter` DEFAULT CHARACTER SET utf8 ;
+
+CREATE TABLE `waiter`(
+  `id_waiter` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `first_name` VARCHAR(45) NOT NULL,
+  `last_name` VARCHAR(45) NOT NULL,
+  `age` VARCHAR(45) NOT NULL,
+  `employment_date` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_waiter`))
+  ENGINE = InnoDB
+  DEFAULT CHARACTER SET = utf8;
+
+DELETE FROM waiter;
+INSERT INTO `waiter` (`id_waiter`, `first_name`, `last_name`, `age`, `employment_date`) VALUES ('1', 'Artem', 'Tsaplya', '27', '2017-03-15');
+INSERT INTO `waiter` (`id_waiter`, `first_name`, `last_name`, `age`, `employment_date`) VALUES ('2', 'Valeriya', 'Tsaplya', '24', '2015-09-27');
+INSERT INTO `waiter` (`id_waiter`, `first_name`, `last_name`, `age`, `employment_date`) VALUES ('3', 'Sergey', 'Smirnov', '24', '2018-01-08');
+INSERT INTO `waiter` (`id_waiter`, `first_name`, `last_name`, `age`, `employment_date`) VALUES ('4', 'Pavel', 'Zhyvchenko', '28', '2017-10-17');
