@@ -8,6 +8,10 @@ public class LoginAdmin {
 
     public LoginAdmin() {
     }
+    public LoginAdmin(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
 
     public String getPassword() {
         return password;
@@ -17,10 +21,6 @@ public class LoginAdmin {
         this.password = password;
     }
 
-    public LoginAdmin(String login, String password) {
-        this.login = login;
-        this.password = password;
-    }
 
     public String getLogin() {
         return login;

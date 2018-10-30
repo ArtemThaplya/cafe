@@ -3,9 +3,9 @@ package login_admin;
 public class CheckPassword {
     private LoginAdmin loginAdmin = new LoginAdmin();
 
-    void addAdminAndPasswordCheck() {
+    public boolean addAdminAndPasswordCheck(String login, String password) {
         addAdmin();
-        boolean loginStatus = passwordCheck("",""); /// TODO: 15.10.2018 от клиента приходит логин и пароль
+        return passwordCheck(login, password);
     }
 
     private boolean passwordCheck(String login, String password) {
