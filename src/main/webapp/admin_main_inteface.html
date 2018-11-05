@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" xmlns:jsp="http://java.sun.com/JSP/Page">
-
+<html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camera</title>
-    <meta name="author" content="Codrops" />
-    <link rel="stylesheet" href="/css/cafe_style.css">
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="/css/icons.css" />
-    <link rel="stylesheet" type="text/css" href="/css/style5.css" />
-    <script src="/js/modernizr.custom.js"></script>
-    <link rel="stylesheet" href="/css/style_main.css" media="screen" type="text/css" />
+    <title>Automated cafe</title>
+    <link rel="stylesheet" href="css/contacts_style.css">
+    <link rel="stylesheet" href="css/cafe_style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/style5.css" />
+    <script src="js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="css/style_main.css" media="screen" type="text/css" />
+
     <style>
         canvas {
     padding:0;
     margin:0;
 }
-        div.btnbg {
-        position:fixed;
-        left:0;
-        top: 130px;
+div.btnbg {
+    position:fixed;
+    left:0;
+    top: 130px;
 }
-        .top-menu {
+    .top-menu {
             position: relative;
             background: rgba(34, 34, 34, 0.2);
         }
@@ -32,23 +30,28 @@
             margin: 0;
             padding: 0;
         }
+
         .menu-main:after {
             content: "";
             display: table;
             clear: both;
         }
+
         .left-item {
             float: left;
         }
+
         .right-item {
             float: right;
         }
+
         .navbar-logo {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
         }
+
         .menu-main a {
             text-decoration: none;
             display: block;
@@ -65,17 +68,20 @@
         .menu-main a:hover {
             background: rgba(0, 0, 0, 0.3);
         }
+
         @media (max-width: 830px) {
             .menu-main {
                 padding-top: 90px;
                 text-align: center;
             }
+
             .navbar-logo {
                 position: absolute;
                 left: 50%;
                 top: 10px;
                 transform: translateX(-50%);
             }
+
             .menu-main li {
                 float: none;
                 display: inline-block;
@@ -93,17 +99,51 @@
                 display: block;
             }
         }
-  </style>
-</head>
+        .decor-1 {
+            position: absolute;
+            margin-left: 36%;
+            margin-right: 36%;
+        }
+        .decor-2 {
+            position: absolute;
+            margin-top: 450px;
+            margin-left: 36%;
+            margin-right: 36%;
+        }
+/*новый фон*/
+        body {
+            overflow-y: scroll;
+            background-image:url(im/font.jpg);
+            background-size: 100% 100%;
+            margin:0 auto;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+}
 
+/*        новый фон*/
+/*        футер*/
+        #footer{
+            margin-top: 36.5%;
+            background: #665;
+            color: #fff;
+            font-size: 75%;
+            padding: 5px;
+            clear: both;
+            text-align: center;
+            clear: both;
+        }
+        
+/*        футер*/
+    </style>
+</head>
 <body>
-    <!--    <div class="container">-->
+<div class="container">
     <nav id="bt-menu" class="bt-menu">
         <br><br><br>
         <a href="#" class="bt-menu-trigger"><span>Меню</span></a>
         <ul>
             <br><br>
-            <li><a href="/admin_staff.html">Персонал</a></li>
+            <li><a href="admin_staff.html">Персонал</a></li>
             <li><a href="#">Зарплаты</a></li>
             <li><a href="#">Отчеты</a></li>
             <li><a href="#">Отчеты</a></li>
@@ -118,18 +158,13 @@
             <li><a href="#" class="bt-icon icon-github">icon-github</a></li>
         </ul>
     </nav>
-    <!--    </div> /container -->
+</div><!-- /container -->
+<div id="footer">
+    <p>Automated cafe © 2018. All rights reserved.</p>
+    </div>
     
-    <iframe width="670px" height="340px" src="https://www.youtube.com/embed/4993sBLAzGA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        
-        <iframe width="670" height="340" src="https://www.youtube.com/embed/GWhtqWGXhPc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        
-        <iframe width="670" height="340" src="https://www.youtube.com/embed/OalhwAgOmQs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        
-        <iframe width="670" height="340" src="https://www.youtube.com/embed/iJjhOU5nygQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </body>
 <script src="js/classie.js"></script>
 <script src="js/borderMenu.js"></script>
-
-<jsp:include page="js/font.js"></jsp:include>
+  
 </html>

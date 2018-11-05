@@ -1,3 +1,5 @@
+package add_delete_waiter;
+
 import java.util.Date;
 
 public class Waiter {
