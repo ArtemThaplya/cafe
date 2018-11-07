@@ -12,19 +12,21 @@ public class WaiterConstructor {
     private String lastName;
     private int age;
     private Date employmentDate;
+    private String position;
 
 
     public WaiterConstructor() {
     }
 
 
-    public WaiterConstructor(AddW addW, Statement stm, String firstName, String lastName, int age, Date employmentDate) {
+    public WaiterConstructor(AddW addW, Statement stm, String firstName, String lastName, int age, Date employmentDate, String position) {
         this.addW = addW;
         this.stm = stm;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.employmentDate = employmentDate;
+        this.position = position;
     }
 
     public WaiterConstructor(DeleteW deleteW, Statement stm, String firstName, String lastName) {
@@ -36,7 +38,7 @@ public class WaiterConstructor {
 
 
     public void actionAdd(){
-        addW.add(stm, firstName, lastName, age, employmentDate);
+        addW.add(stm, firstName, lastName, age, employmentDate, position);
     }
     public void actionDelete(){
         deleteW.delete(stm, firstName, lastName);

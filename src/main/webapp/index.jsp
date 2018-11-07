@@ -111,8 +111,8 @@
 <nav class="top-menu">
     <ul class="menu-main">
         <li class="left-item"><a href="index.jsp">Main</a></li>
-        <li class="left-item"><a href="">About</a></li>
-        <li class="left-item"><a href="">Story</a></li>
+        <li class="left-item"><a href="main_menu/about.html">About</a></li>
+        <li class="left-item"><a href="main_menu/story.html">Story</a></li>
         <li class="right-item"><a href="contacts.html">Contact</a></li>
         <li class="right-item"><a href="admin.html">Admin</a></li>
         <li class="right-item"><a href="gallery.html">Gallery</a></li>
@@ -125,10 +125,10 @@
     <a href="#" class="bt-menu-trigger"><span>Меню</span></a>
     <ul>
         <br><br>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Bar</a></li>
-        <li><a href="#">Breakfast</a></li>
-        <li><a href="#">Lunch</a></li>
+        <li><a href="border_menu/menu.html">Menu</a></li>
+        <li><a href="border_menu/bar.html">Bar</a></li>
+        <li><a href="border_menu/breakfast.html">Breakfast</a></li>
+        <li><a href="border_menu/lunch.html">Lunch</a></li>
         <li><a href="admin.html">Admin</a></li>
         <li><a href="contacts.html">Contacts</a></li>
     </ul>

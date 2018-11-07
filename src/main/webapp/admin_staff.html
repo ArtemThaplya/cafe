@@ -185,28 +185,29 @@ div.btnbg {
 </div><!-- /container -->
 
 
-    <form class="decor" class="decor-1" >
+    <form class="decor" class="decor-1" action="/addWaiter">
         <div class="form-left-decoration"></div>
         <div class="form-right-decoration"></div>
         <div class="circle"></div>
         <div class="form-inner">
             <h3>Add employee</h3>
-            <input type="name" placeholder="Name">
-            <input type="second_name" placeholder="Second name">
-            <input type="age" placeholder="Age">
-            <input type="employment_date" placeholder="Employment date">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="second_name" placeholder="Second name">
+            <input type="age" id="age" placeholder="Age">
+            <input type="employment_date" id="employment_date" placeholder="Employment date">
+            <input type="position" id="position" placeholder="Position">
             <input type="submit" value="Add">
         </div>
     </form>
 
-    <form class="decor" class="decor-2">
+    <form class="decor" class="decor-2" action="/deleteWaiter">
         <div class="form-left-decoration"></div>
         <div class="form-right-decoration"></div>
         <div class="circle"></div>
         <div class="form-inner">
             <h3>Delete employee</h3>
-            <input type="name" placeholder="Name">
-            <input type="second_name" placeholder="Second name">
+            <input type="text" id="name_delete" placeholder="Name">
+            <input type="text" id="second_name_delete" placeholder="Second name">
             <input type="submit" value="Delete">
         </div>
     </form>

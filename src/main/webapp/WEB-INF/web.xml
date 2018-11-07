@@ -14,4 +14,13 @@
     </servlet-mapping>
     <!-- Note: All <servlet> elements MUST be grouped together and
           placed IN FRONT of the <servlet-mapping> elements -->
+    <servlet>
+        <servlet-name>AddWaiterServlet</servlet-name>
+        <servlet-class>servlet.AddWaiterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddWaiterServlet</servlet-name>
+        <url-pattern>/printTable</url-pattern>
+    </servlet-mapping>
+
 </web-app>

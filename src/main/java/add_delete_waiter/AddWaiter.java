@@ -6,9 +6,9 @@ import java.sql.Statement;
 import java.util.Date;
 
 public class AddWaiter implements AddW {
-    public void add(Statement stmt, String firstName, String lastName, int age, Date employmentDate) {
+    public void add(Statement stmt, String firstName, String lastName, int age, Date employmentDate, String position) {
         try {
-            stmt.executeUpdate("INSERT INTO staff (first_name, last_name, age, employment_date) VALUES ("+firstName+", "+ lastName +", "+ age +", "+ employmentDate +")");
+            stmt.executeUpdate("INSERT INTO staff (first_name, last_name, age, employment_date, position) VALUES ("+firstName+", "+ lastName +", "+ age +", "+ employmentDate +", "+ position +")");
         } catch (SQLException e) {
             e.printStackTrace();
         }
