@@ -148,15 +148,15 @@ div.btnbg {
 
 
 <table align="center" class="easyui-datagrid" title="Basic DataGrid" style="width:700px;height:250px"
-       data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
+       data-options="singleSelect:true,collapsible:true,url:'/servlet/DataGrid',method:'get'">
     <thead>
     <tr>
-        <th data-options="field:'itemid',width:80">ID waiter</th>
-        <th data-options="field:'productid',width:100">First name</th>
-        <th data-options="field:'listprice',width:80,align:'right'">Last name</th>
-        <th data-options="field:'unitcost',width:80,align:'right'">Age</th>
-        <th data-options="field:'attr1',width:250">Employment date</th>
-        <th data-options="field:'status',width:60,align:'center'">Position</th>
+        <th data-options="field:'id_waiter',width:50, align:'right'">ID waiter</th>
+        <th data-options="field:'first_name',width:150, align:'right'">First name</th>
+        <th data-options="field:'last_name',width:150,align:'right'">Last name</th>
+        <th data-options="field:'age',width:35,align:'right'">Age</th>
+        <th data-options="field:'employment_date',width:150, align:'right'">Employment date</th>
+        <th data-options="field:'position ',width:150,align:'right'">Position</th>
     </tr>
     </thead>
 </table>
@@ -167,7 +167,7 @@ div.btnbg {
         <a href="#" class="bt-menu-trigger"><span>Меню</span></a>
         <ul>
             <br><br>
-            <li><a href="admin_staff.html">Персонал</a></li>
+            <li><a href="admin_staff.jsp">Персонал</a></li>
             <li><a href="#">Зарплаты</a></li>
             <li><a href="#">Отчеты</a></li>
             <li><a href="#">Отчеты</a></li>
@@ -193,9 +193,9 @@ div.btnbg {
             <h3>Add employee</h3>
             <input type="text" id="name" placeholder="Name">
             <input type="text" id="second_name" placeholder="Second name">
-            <input type="age" id="age" placeholder="Age">
-            <input type="employment_date" id="employment_date" placeholder="Employment date">
-            <input type="position" id="position" placeholder="Position">
+            <input type="text" id="age" placeholder="Age">
+            <input type="text" id="employment_date" placeholder="Employment date">
+            <input type="text" id="position" placeholder="Position">
             <input type="submit" value="Add">
         </div>
     </form>

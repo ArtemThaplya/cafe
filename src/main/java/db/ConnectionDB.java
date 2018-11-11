@@ -42,15 +42,21 @@ public class ConnectionDB {
     }
 
     private void createContainer(){
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
-        WaiterConstructor waiterConstructor = null;
-        try {
-            waiterConstructor = (WaiterConstructor) applicationContext.getBean("waiterConstructor", "Ddfgs","Svd",26, ft.parse("2016-04-23"));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        waiterConstructor.actionAdd();
-        waiterConstructor.actionDelete();
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
+//        WaiterConstructor waiterConstructor = null;
+//        try {
+//            waiterConstructor = (WaiterConstructor) applicationContext.getBean("waiterConstructor", "Ddfgs","Svd",26, ft.parse("2016-04-23"));
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+//        waiterConstructor.actionAdd();
+//        waiterConstructor.actionDelete();
+
+
+
+
+
+
     }
 }
 

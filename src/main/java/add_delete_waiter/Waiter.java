@@ -9,11 +9,14 @@ public class Waiter {
     private int age;
     private Date employmentDate;
 
-    public Waiter(String firstName, String lastName, int age, Date employmentDate) {
+    private String position;
+
+    public Waiter(String firstName, String lastName, int age, Date employmentDate, String position) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.employmentDate = employmentDate;
+        this.position = position;
     }
 
     public int getId() {
@@ -54,5 +57,13 @@ public class Waiter {
 
     public void setEmploymentDate(Date employmentDate) {
         this.employmentDate = employmentDate;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
