@@ -1,5 +1,6 @@
 package servlet;
 
+import add_delete_waiter.table.DisplayingTable;
 import org.json.JSONObject;
 
 import javax.servlet.ServletException;
@@ -18,10 +19,10 @@ public class DataGrid extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        response.setContentType("application/json");
-//        DisplayingTable displayingTable = new DisplayingTable();
-//        PrintWriter writer = response.getWriter();
-//        writer.println(displayingTable.printTable());
+        response.setContentType("application/json");
+        DisplayingTable displayingTable = new DisplayingTable();
+        PrintWriter writer = response.getWriter();
+        writer.println(displayingTable.printTable());
 
 
 

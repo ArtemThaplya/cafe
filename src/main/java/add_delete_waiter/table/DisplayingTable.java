@@ -7,18 +7,23 @@ public class DisplayingTable {
     private static final String user = "persone_my_sql";
     private static final String password = "12345678";
     private static Connection con;
-    private static Statement stmt;
+
 
     public String printTable() {
         String str = "";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url, user, password);
-            stmt = con.createStatement();
-            PreparedStatement prst = con.prepareStatement("SELECT id_waiter, first_name, last_name, age, employment_date, position FROM staff LIMIT 6");
-            ResultSet rs = prst.executeQuery();
-            str = "{\"total\":6,\"rows\":[";
 
+            PreparedStatement prstm = con.prepareStatement("SELECT COUNT(*) FROM staff");
+            ResultSet count = prstm.executeQuery();
+            count.last();
+            int rowCount = count.getRow();
+
+            PreparedStatement prst = con.prepareStatement("SELECT id_waiter, first_name, last_name, age, employment_date, position FROM staff");
+            ResultSet rs = prst.executeQuery();
+
+            str = "{\"total\":"+rowCount+",\"rows\":[";
             while (rs.next()) {
                 str += "{";
                 str += "\"id_waiter\":\"" + rs.getInt(1) + "\",";

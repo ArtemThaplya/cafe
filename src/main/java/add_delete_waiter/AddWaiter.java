@@ -1,14 +1,21 @@
 package add_delete_waiter;
 
-import java.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Date;
 
 public class AddWaiter implements AddW {
-    public void add(Statement stmt, String firstName, String lastName, int age, Date employmentDate, String position) {
+    private static PreparedStatement stmt;
+
+    public void add(Connection con, String first_name, String last_name, int age, String dateString, String position) {
         try {
-            stmt.executeUpdate("INSERT INTO staff (first_name, last_name, age, employment_date, position) VALUES ("+firstName+", "+ lastName +", "+ age +", "+ employmentDate +", "+ position +")");
+            stmt = con.prepareStatement("INSERT INTO staff (first_name, last_name, age, employment_date, position) VALUES (?, ?, ?, ?, ?)");
+            stmt.setString(1, first_name);
+            stmt.setString(2, last_name);
+            stmt.setInt(3, age);
+            stmt.setDate(4, java.sql.Date.valueOf(dateString));
+            stmt.setString(5, position);
+            stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }

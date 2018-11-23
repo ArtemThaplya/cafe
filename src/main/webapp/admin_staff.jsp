@@ -5,11 +5,11 @@
     <title>Automated cafe</title>
     <link rel="stylesheet" href="css/contacts_style.css">
     <link rel="stylesheet" href="css/cafe_style.css">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/icons.css" />
-    <link rel="stylesheet" type="text/css" href="css/style5.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/icons.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style5.css"/>
     <script src="js/modernizr.custom.js"></script>
-    <link rel="stylesheet" href="css/style_main.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/style_main.css" media="screen" type="text/css"/>
 
     <!--таблица-->
     <link rel="stylesheet" type="text/css" href="css/themes_table/easyui.css">
@@ -21,18 +21,21 @@
 
     <style>
         canvas {
-    padding:0;
-    margin:0;
-}
-div.btnbg {
-    position:fixed;
-    left:0;
-    top: 130px;
-}
-    .top-menu {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.btnbg {
+            position: fixed;
+            left: 0;
+            top: 130px;
+        }
+
+        .top-menu {
             position: relative;
             background: rgba(34, 34, 34, 0.2);
         }
+
         .menu-main {
             list-style: none;
             margin: 0;
@@ -107,29 +110,32 @@ div.btnbg {
                 display: block;
             }
         }
+
         .decor-1 {
             position: absolute;
             margin-left: 36%;
             margin-right: 36%;
         }
+
         .decor-2 {
             position: absolute;
             margin-top: 450px;
             margin-left: 36%;
             margin-right: 36%;
         }
-/*новый фон*/
+
+        /*новый фон*/
         body {
             overflow-y: scroll;
-            background-image:url(im/font.jpg);
+            background-image: url(im/font.jpg);
             background-size: 100% 100%;
-            background-repeat:no-repeat;
-            background-attachment:fixed;
-}
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
 
-/*        новый фон*/
-/*        футер*/
-        #footer{
+        /*        новый фон*/
+        /*        футер*/
+        #footer {
             margin-top: 36.5%;
             background: #665;
             color: #fff;
@@ -139,16 +145,15 @@ div.btnbg {
             text-align: center;
             clear: both;
         }
-        
-/*        футер*/
+
+        /*        футер*/
     </style>
 </head>
 <body>
 
 
-
 <table align="center" class="easyui-datagrid" title="Basic DataGrid" style="width:700px;height:250px"
-       data-options="singleSelect:true,collapsible:true,url:'/servlet/DataGrid',method:'get'">
+               data-options="singleSelect:true,collapsible:true,url:'/servlet/DataGrid',method:'get'">
     <thead>
     <tr>
         <th data-options="field:'id_waiter',width:50, align:'right'">ID waiter</th>
@@ -185,37 +190,37 @@ div.btnbg {
 </div><!-- /container -->
 
 
-    <form class="decor" class="decor-1" action="/addWaiter">
-        <div class="form-left-decoration"></div>
-        <div class="form-right-decoration"></div>
-        <div class="circle"></div>
-        <div class="form-inner">
-            <h3>Add employee</h3>
-            <input type="text" id="name" placeholder="Name">
-            <input type="text" id="second_name" placeholder="Second name">
-            <input type="text" id="age" placeholder="Age">
-            <input type="text" id="employment_date" placeholder="Employment date">
-            <input type="text" id="position" placeholder="Position">
-            <input type="submit" value="Add">
-        </div>
-    </form>
-
-    <form class="decor" class="decor-2" action="/deleteWaiter">
-        <div class="form-left-decoration"></div>
-        <div class="form-right-decoration"></div>
-        <div class="circle"></div>
-        <div class="form-inner">
-            <h3>Delete employee</h3>
-            <input type="text" id="name_delete" placeholder="Name">
-            <input type="text" id="second_name_delete" placeholder="Second name">
-            <input type="submit" value="Delete">
-        </div>
-    </form>
-    <div id="footer">
-    <p>Automated cafe © 2018. All rights reserved.</p>
+<form class="decor" class="decor-1" action="${pageContext.request.contextPath}/addWaiter" method="GET">
+    <div class="form-left-decoration"></div>
+    <div class="form-right-decoration"></div>
+    <div class="circle"></div>
+    <div class="form-inner">
+        <h3>Add employee</h3>
+        <input type="text" name="first_name" placeholder="Name">
+        <input type="text" name="last_name" placeholder="Second name">
+        <input type="text" name="age" placeholder="Age">
+        <input type="text" name="employment_date" placeholder="Employment date">
+        <input type="text" name="position" placeholder="Position">
+        <input type="submit" value="Add">
     </div>
+</form>
+
+<form class="decor" class="decor-2" action="${pageContext.request.contextPath}/deleteWaiterServlet" method="GET">
+    <div class="form-left-decoration"></div>
+    <div class="form-right-decoration"></div>
+    <div class="circle"></div>
+    <div class="form-inner">
+        <h3>Delete employee</h3>
+        <input type="text" name="name_delete" placeholder="Name">
+        <input type="text" name="second_name_delete" placeholder="Second name">
+        <input type="submit" value="Delete">
+    </div>
+</form>
+<div id="footer">
+    <p>Automated cafe © 2018. All rights reserved.</p>
+</div>
 </body>
 <script src="js/classie.js"></script>
 <script src="js/borderMenu.js"></script>
-  
+
 </html>

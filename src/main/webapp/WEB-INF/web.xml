@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0"
          xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
     <servlet>
         <servlet-name>LoginADM</servlet-name>
         <servlet-class>servlet.LoginADM</servlet-class>
@@ -22,13 +23,16 @@
         <servlet-name>AddWaiterServlet</servlet-name>
         <url-pattern>/addWaiter</url-pattern>
     </servlet-mapping>
-    <!--<servlet>-->
-        <!--<servlet-name>AddWaiterServlet</servlet-name>-->
-        <!--<servlet-class>servlet.AddWaiterServlet</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>AddWaiterServlet</servlet-name>-->
-        <!--<url-pattern>/printTable</url-pattern>-->
-    <!--</servlet-mapping>-->
+
+
+
+    <servlet>
+        <servlet-name>DeleteWaiterServlet</servlet-name>
+        <servlet-class>servlet.DeleteWaiterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteWaiterServlet</servlet-name>
+        <url-pattern>/deleteWaiterServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>

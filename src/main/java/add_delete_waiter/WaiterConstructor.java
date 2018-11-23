@@ -1,17 +1,17 @@
 package add_delete_waiter;
 
-import java.sql.ResultSet;
+import java.sql.Connection;
 import java.sql.Statement;
 import java.util.Date;
 
 public class WaiterConstructor {
     private AddW addW;
     private DeleteW deleteW;
-    private Statement stm;
+    private Connection con;
     private String firstName;
     private String lastName;
     private int age;
-    private Date employmentDate;
+    private String employmentDate;
     private String position;
 
 
@@ -19,9 +19,9 @@ public class WaiterConstructor {
     }
 
 
-    public WaiterConstructor(AddW addW, Statement stm, String firstName, String lastName, int age, Date employmentDate, String position) {
+    public WaiterConstructor(AddW addW, Connection con, String firstName, String lastName, int age, String employmentDate, String position) {
         this.addW = addW;
-        this.stm = stm;
+        this.con = con;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -29,19 +29,19 @@ public class WaiterConstructor {
         this.position = position;
     }
 
-    public WaiterConstructor(DeleteW deleteW, Statement stm, String firstName, String lastName) {
+    public WaiterConstructor(DeleteW deleteW, Connection con, String firstName, String lastName) {
         this.deleteW = deleteW;
-        this.stm = stm;
+        this.con = con;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
 
     public void actionAdd(){
-        addW.add(stm, firstName, lastName, age, employmentDate, position);
+        addW.add(con, firstName, lastName, age, employmentDate, position);
     }
     public void actionDelete(){
-        deleteW.delete(stm, firstName, lastName);
+        deleteW.delete(con, firstName, lastName);
     }
 
     public AddW getAddW() {
